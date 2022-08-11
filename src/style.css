@@ -1,0 +1,10 @@
+.movielist {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 10px 10px;
+}
+
+.movie-items img {
+  width: 100%;
+  height: 60vh;
+}
