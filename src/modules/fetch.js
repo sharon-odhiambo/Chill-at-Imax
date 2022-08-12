@@ -32,4 +32,29 @@ const postLikes = async (id) => {
     return error;
   }
 };
-export { fetchMovies, fetchLikes, postLikes };
+const postComments = async (id, name, usercomment) => {
+  const response = await fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/mSLrzI04H4x2wsHv1BBd/comments', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ item_id: id, username: name, comment: usercomment }),
+  });
+  try {
+    const postedComments = await response.json();
+    return postedComments;
+  } catch (error) {
+    return error;
+  }
+};
+const fetchComments = async (id) => {
+  const response = await fetch(`https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/mSLrzI04H4x2wsHv1BBd/comments?item_id=${id}`);
+  try {
+    const commentsresults = await response.json();
+    return commentsresults;
+  } catch (error) {
+    return error;
+  }
+};
+
+export {
+  fetchMovies, fetchLikes, postLikes, postComments, fetchComments,
+};
