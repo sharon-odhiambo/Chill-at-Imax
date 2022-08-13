@@ -1,0 +1,206 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: black;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 20px;
+  font-weight: 600;
+  background-color: darkred;
+  height: 60px;
+  padding: 0 20px;
+}
+
+nav ul {
+  display: flex;
+  text-decoration: none;
+  list-style: none;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 15px;
+  font-size: 20px;
+}
+
+nav div a,
+nav ul li a {
+  text-decoration: none;
+  color: black;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5px;
+  height: 50px;
+  background-color: darkred;
+}
+
+.footer div {
+  background-image: url('./images/logo.PNG');
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.movielist {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  margin: auto;
+}
+
+.movie-items {
+  width: 80vw;
+  height: 100%;
+  margin: auto;
+}
+
+.movie-items img {
+  width: 100%;
+  height: 50vh;
+}
+
+.movie-items p {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+}
+
+.btn {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.comments-button,
+.reserve {
+  padding: 8px;
+  cursor: pointer;
+  border-radius: 8px 2px;
+  background-color: darkred;
+}
+
+.popup {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: fixed;
+  overflow-y: scroll;
+  width: 90vw;
+  height: 90vh;
+  background-color: darkred;
+  border: goldenrod;
+  left: 0;
+  right: 0;
+  top: 10px;
+  margin: auto;
+}
+
+.popup img {
+  width: 80vw;
+  margin: auto;
+  margin-top: 5%;
+  margin-left: 5%;
+}
+
+.popup h3 {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+form input {
+  padding: 10px;
+  border: 3px solid goldenrod;
+}
+
+form textarea {
+  padding: 5px;
+  border: 3px solid goldenrod;
+}
+
+form button {
+  padding: 10px;
+  border: 3px solid goldenrod;
+  box-shadow: 3px 3px black;
+  cursor: pointer;
+}
+
+.popup p,
+.popup ul {
+  color: darkturquoise;
+  font-size: 16px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.popup h3 button {
+  cursor: pointer;
+  font-size: 16px;
+  padding: 0;
+  border: none;
+  background: none;
+  color: #fff;
+}
+
+@media screen and (min-width: 768px) {
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+    background-color: darkred;
+    height: 60px;
+    padding: 0 20px;
+  }
+
+  .movielist {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 10px 20px;
+    width: 95vw;
+    margin: auto;
+  }
+
+  .movie-items {
+    width: 100%;
+    height: 100%;
+  }
+
+  .movie-items img {
+    width: 100%;
+    height: 50vh;
+  }
+
+  .popup {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    position: fixed;
+    overflow-y: scroll;
+    width: 60vw;
+    height: 70vh;
+    background-color: darkred;
+    border: goldenrod;
+    top: 20%;
+    left: 20%;
+  }
+
+  .popup img {
+    width: 80%;
+    margin-top: 10%;
+  }
+}
