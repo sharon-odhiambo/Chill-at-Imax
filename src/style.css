@@ -108,7 +108,7 @@ footer {
   width: 80vw;
   margin: auto;
   margin-top: 5%;
-  margin-left: 5%;
+  left: 20px;
 }
 
 .popup h3 {
@@ -138,6 +138,7 @@ form button {
   border: 3px solid goldenrod;
   box-shadow: 3px 3px black;
   cursor: pointer;
+  margin-bottom: 10px;
 }
 
 .popup p,
@@ -147,10 +148,12 @@ form button {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-.popup h3 button {
+.close-btn {
   cursor: pointer;
+  width: 100%;
+  text-align: right;
   font-size: 16px;
-  padding: 0;
+  padding: 10px;
   border: none;
   background: none;
   color: #fff;
@@ -187,20 +190,26 @@ form button {
 
   .popup {
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    flex-direction: column;
+    justify-content: space-between;
     position: fixed;
     overflow-y: scroll;
-    width: 60vw;
-    height: 70vh;
+    width: 30vw;
+    height: 80vh;
     background-color: darkred;
     border: goldenrod;
-    top: 20%;
-    left: 20%;
+    top: 15%;
+    left: 10%;
   }
 
   .popup img {
-    width: 80%;
-    margin-top: 10%;
+    width: 70%;
+    height: 50vh;
+    margin: auto;
+  }
+
+  .popup div {
+    width: 90%;
+    margin: auto;
   }
 }

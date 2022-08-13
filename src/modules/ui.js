@@ -55,6 +55,7 @@ const displayMovies = async () => {
     const commentsDisplay = document.createElement('div');
     commentsDisplay.classList.add('popup');
     commentsDisplay.innerHTML = `
+    <button type="button" class="close-btn"><span>X</span></button>
     <div>
       <img src="${comments.image.medium}" alt="${comments.name}">
       <h2>${comments.name}</h2>
@@ -62,9 +63,7 @@ const displayMovies = async () => {
       <p><span>${comments.premiered}</span><span>${comments.rating.average}</span></p>
     </div>
     <div>
-      <h3><span>Comments</span>
-      <button type="button" class="close-btn"><span>X</span></button>
-      </h3>
+      <h3><span>Comments</span></h3>
       <ul></ul>
       <h4>Add a new comment</h4>
       <form action="#" id=${id}>
@@ -110,6 +109,7 @@ const displayMovies = async () => {
     const reservesDisplay = document.createElement('div');
     reservesDisplay.classList.add('popup');
     reservesDisplay.innerHTML = `
+    <button type="button" class="close-btn"><span>X</span></button>
     <div>
         <img src="${reserves.image.medium}" alt="${reserves.name}">
         <h2>${reserves.name}</h2>
@@ -118,7 +118,6 @@ const displayMovies = async () => {
       </div>
       <div>
         <h3><span>Reservations</span>
-        <button type="button" class="close-btn"><span>X</span></button>
         </h3>
         <ul></ul>
         <h4>Add a new reservation</h4>
