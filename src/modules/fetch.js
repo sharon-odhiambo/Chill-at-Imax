@@ -54,7 +54,37 @@ const fetchComments = async (id) => {
     return error;
   }
 };
+const postReservations = async (id, name, datePosted, dateEnded) => {
+  const response = await fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/mSLrzI04H4x2wsHv1BBd/reservations', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(
+      {
+        item_id: id,
+        username: name,
+        date_start: datePosted,
+        date_end: dateEnded,
+      },
+    ),
+  });
+  try {
+    const postedreservations = await response.json();
+    return postedreservations;
+  } catch (error) {
+    return error;
+  }
+};
+const fetchReservations = async (id) => {
+  const response = await fetch(`https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/mSLrzI04H4x2wsHv1BBd/reservations?item_id=${id}`);
+  try {
+    const reservationresults = await response.json();
+    return reservationresults;
+  } catch (error) {
+    return error;
+  }
+};
 
 export {
   fetchMovies, fetchLikes, postLikes, postComments, fetchComments,
+  postReservations, fetchReservations,
 };
