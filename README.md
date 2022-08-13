@@ -21,7 +21,7 @@ To get a local copy for practice or as a template, follow these simple steps.
 
 Access the live source on -https://github.com/sharon-odhiambo/Chill-at-Imax
 
-You can access the live actions at Page(https://sharon-odhiambo.github.io/Chill-at-Imax/)
+You can access the live actions at [Chill-at-Imax](https://sharon-odhiambo.github.io/Chill-at-Imax/)
 
 Copy the **https** or **SSH** address on the code
 Clone the repository using your editor 
